@@ -45,10 +45,7 @@ public:
 
 	Animator(sf::Sprite& sprite);
 
-	Animator::Animation& CreateAnimation(std::string const& name,
-										 std::string const& textureName,
-										 sf::Time const& duration,
-										 bool loop = false);
+	Animator::Animation& CreateAnimation(std::string const& name, std::string const& textureName, sf::Time const& duration, bool loop = false);
 	
 	void Update(sf::Time const& dt);
 	

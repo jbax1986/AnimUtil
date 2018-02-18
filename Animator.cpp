@@ -1,16 +1,9 @@
 #include "Animator.h"
 #include "AssetManager.h"
 
-Animator::Animator(sf::Sprite& sprite) : m_Sprite(sprite),
-										 m_CurrentTime(),
-										 m_CurrentAnimation(nullptr)
-{
-}
+Animator::Animator(sf::Sprite& sprite) : m_Sprite(sprite), m_CurrentTime(), m_CurrentAnimation(nullptr) { }
 
-Animator::Animation& Animator::CreateAnimation(std::string const& name,
-											   std::string const& textureName,
-											   sf::Time const& duration,
-											   bool loop)
+Animator::Animation& Animator::CreateAnimation(std::string const& name, std::string const& textureName, sf::Time const& duration, bool loop)
 {
 	m_Animations.emplace_back(name, textureName, duration, loop);
 	
